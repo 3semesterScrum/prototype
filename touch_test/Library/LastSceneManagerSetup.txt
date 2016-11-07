@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/TouchOne.unity
+- path: Assets/Controller+Car.unity
   isLoaded: 1
   isActive: 1
