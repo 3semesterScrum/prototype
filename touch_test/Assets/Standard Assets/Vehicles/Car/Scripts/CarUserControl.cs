@@ -2,11 +2,14 @@ using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
+
 namespace UnityStandardAssets.Vehicles.Car
 {
+    
     [RequireComponent(typeof (CarController))]
     public class CarUserControl : MonoBehaviour
     {
+        public GameObject script;
         private CarController m_Car; // the car controller we want to use
         [SerializeField]private float h;
         [SerializeField]private float v;
