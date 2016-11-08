@@ -1,4 +1,20 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Menu.unity
+=======
+<<<<<<< HEAD
+- path: Assets/HospitalPrototype.unity
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- path: Assets/Menu.unity
+=======
+- path: Assets/HospitalPrototype.unity
+>>>>>>> c796f3da42ce3262e3999f3ccd2255f9475026a5
+=======
+- path: Assets/Controller+Car.unity
+>>>>>>> 0bfe224208ebd5b55425b2c3790651ecb3b146d3
+>>>>>>> 6f5cca70c59fa2c0310a3414ed6e23c17d66360f
+>>>>>>> eda0c198924643a32929d99ff2418480e5fb37d9
   isLoaded: 1
   isActive: 1
