@@ -1,38 +1,64 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Vehicle : MonoBehaviour {
+public class Vehicle : MonoBehaviour
+{
 
-    public  static string vehicle;
+    public static string vehicle;
     // Use this for initialization
-   
 
-    void Start () {
+
+    void Start()
+    {
         DontDestroyOnLoad(this);
-	}
-
-	
-	// Update is called once per frame
-	void Update () {
-        var farve= GetComponent<Renderer>();
-
-        if (vehicle == "patient bus")
-        {
-            farve.material.color = Color.blue;
-        }
-        if (vehicle == "fejeblad")
-        {
-            farve.material.color = Color.green;
-        }
-        if (vehicle == "el truck")
-        {
-            farve.material.color = Color.red;
-        }
-        if (vehicle == "Senge transport")
-        {
-            farve.material.color = Color.yellow;
-        }
     }
 
-    
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (CreateVehicle()==false)
+        {
+            CreateVehicle();
+        }
+
+    }
+    private bool CreateVehicle()
+    {
+        if (!GameObject.FindGameObjectWithTag("vehicle"))
+        {
+
+            if (vehicle == "patient bus")
+            {
+                // farve.material.color = Color.blue;
+                GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                cube.name = "patient bus";
+                cube.tag = "vehicle";
+            }
+            if (vehicle == "fejeblad")
+            {
+                // farve.material.color = Color.green;
+                GameObject capsule = GameObject.CreatePrimitive(PrimitiveType.Capsule);
+                capsule.name = "fejeblad";
+                capsule.tag = "vehicle";
+            }
+            if (vehicle == "el truck")
+            {
+                GameObject cylinder = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+                cylinder.name = "el truck";
+                cylinder.tag = "vehicle";
+                //  farve.material.color = Color.red;
+            }
+            if (vehicle == "Senge transport")
+            {
+                GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                sphere.name = "senge transport";
+               sphere.tag = "vehicle";
+                // farve.material.color = Color.yellow;
+            }
+            return true;
+        }
+        return false;
+    }
+
 }
