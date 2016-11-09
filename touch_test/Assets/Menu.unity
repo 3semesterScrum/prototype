@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692558, g: 0.49678743, b: 0.57508624, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692492, g: 0.4967869, b: 0.57508546, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -390,8 +390,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e3484af4934a3479469304fc62c434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Car: {fileID: 1000010802299472, guid: f45f7433576574e46a07008cfbe5a7c4, type: 2}
-  Touch: {fileID: 223000013018703836, guid: 2dd0e500968337044a678e68973b6c2c, type: 2}
 --- !u!23 &735741189
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1183,6 +1181,7 @@ GameObject:
   - 222: {fileID: 1356094643}
   - 114: {fileID: 1356094642}
   - 114: {fileID: 1356094644}
+  - 223: {fileID: 1356094645}
   m_Layer: 5
   m_Name: patient bus
   m_TagString: Untagged
@@ -1253,6 +1252,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9581b471e036ec4ba210fee888b0a75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!223 &1356094645
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1356094640}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1490518725
 GameObject:
   m_ObjectHideFlags: 0

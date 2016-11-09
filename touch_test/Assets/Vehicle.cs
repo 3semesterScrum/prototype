@@ -1,21 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class Vehicle : MonoBehaviour
 {
 
     public static string vehicle;
-    public GameObject Car;
-    public Canvas Touch;
     // Use this for initialization
 
 
     void Start()
     {
-     
-      
         DontDestroyOnLoad(this);
     }
 
@@ -36,21 +30,10 @@ public class Vehicle : MonoBehaviour
 
             if (vehicle == "patient bus")
             {
-              
                 // farve.material.color = Color.blue;
-              //  GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                
-               GameObject car = Instantiate(Car);
-         // var derp = GameObject.Find("BackgroundImage");
-          //   car.gameObject.GetComponent<CubeMotor>().joystick=(VirtualJoystick)derp;
-                car.name = "patient bus";
-                car.tag = "vehicle";
-                // Canvas  canvas = GameObject.Instantiate(Touch);
-                var derp = GameObject.FindGameObjectWithTag("GameController");
-                Debug.LogError(derp.GetComponentInChildren<Image>());
-              car.gameObject.GetComponent<CubeMotor>().joystick=derp.GetComponentInChildren<Image>().GetComponent<VirtualJoystick>();
-
-               
+                GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                cube.name = "patient bus";
+                cube.tag = "vehicle";
             }
             if (vehicle == "fejeblad")
             {
