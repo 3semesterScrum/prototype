@@ -1,15 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Vehicle : MonoBehaviour
 {
 
     public static string vehicle;
+    public GameObject Car;
+    public Canvas Touch;
     // Use this for initialization
 
 
     void Start()
     {
+
+
         DontDestroyOnLoad(this);
     }
 
@@ -17,7 +23,7 @@ public class Vehicle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CreateVehicle()==false)
+        if (CreateVehicle() == false)
         {
             CreateVehicle();
         }
@@ -30,10 +36,21 @@ public class Vehicle : MonoBehaviour
 
             if (vehicle == "patient bus")
             {
+
                 // farve.material.color = Color.blue;
-                GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                cube.name = "patient bus";
-                cube.tag = "vehicle";
+                //  GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+
+                GameObject car = Instantiate(Car);
+                // var derp = GameObject.Find("BackgroundImage");
+                //   car.gameObject.GetComponent<CubeMotor>().joystick=(VirtualJoystick)derp;
+                car.name = "patient bus";
+                car.tag = "vehicle";
+                // Canvas  canvas = GameObject.Instantiate(Touch);
+                var derp = GameObject.FindGameObjectWithTag("GameController");
+                Debug.LogError(derp.GetComponentInChildren<Image>());
+                car.gameObject.GetComponent<CubeMotor>().joystick = derp.GetComponentInChildren<Image>().GetComponent<VirtualJoystick>();
+
+
             }
             if (vehicle == "fejeblad")
             {
@@ -53,7 +70,7 @@ public class Vehicle : MonoBehaviour
             {
                 GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                 sphere.name = "senge transport";
-               sphere.tag = "vehicle";
+                sphere.tag = "vehicle";
                 // farve.material.color = Color.yellow;
             }
             return true;
