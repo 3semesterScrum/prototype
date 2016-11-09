@@ -22,15 +22,16 @@ public class CubeMotor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         MoveVector = PoolInput();
-        if(car == null)
-        {
-            Move();
-        }
-        else
-        {
-            car.Move(MoveVector.x, MoveVector.z, MoveVector.z, 0f);
-        }
-	}
+        //if(car == null)
+        //{
+        //    Move();
+        //}
+        //else
+        //{
+        //    car.Move(MoveVector.x, MoveVector.z, MoveVector.z, 0f);
+        //}
+        car.Move(MoveVector.x, MoveVector.z, MoveVector.z, 0f);
+    }
 
     private void Move()
     {
