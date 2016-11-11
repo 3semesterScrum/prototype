@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/TouchOne.unity
+- path: Assets/_Scenes/T-BoneTest.unity
   isLoaded: 1
   isActive: 1
